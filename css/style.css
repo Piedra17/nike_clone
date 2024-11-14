@@ -1,0 +1,330 @@
+/* Estilos generales */
+.nav-cont{
+    background-color: #e2e2e2  !important;
+}
+
+.navbar-nav .nav-item svg {
+    margin-right: 100px; /* Ajusta este valor */
+}
+
+.dropdown-menu {
+    left: 0 !important; /* Esto asegura que el menú se alinee a la izquierda */
+    right: auto !important; /* Evita que se alinee a la derecha */
+    transform: translateX(-100%); /* Para moverlo completamente fuera de la pantalla a la izquierda */
+    transition: transform 0.3s ease; /* Agrega una animación suave */
+}
+
+.dropdown-menu.show {
+    transform: translateX(-150px); /* Cuando se muestra, se coloca en su posición normal */
+}
+
+.navbar-nav {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link {
+    color: #000 !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff !important;
+}
+
+/* Estilo personalizado para el icono de eliminar (X) */
+.borrar-producto {
+    color: white; /* Hace el ícono blanco */
+    background-color: #343a40;
+    border: 1px solid #343a40; /* Borde oscuro */
+    border-radius: 50%; /* Redondea el borde para que se vea como un círculo */
+    padding: 5px; /* Agrega un poco de espacio alrededor del ícono */
+    transition: all 0.5s ease; /* Suaviza el cambio de color al pasar el ratón */
+}
+
+.borrar-producto:hover {
+    border: none;
+    background-color: red; /* Fondo oscuro cuando el ratón pasa por encima */
+    color: black; /* Mantén el ícono blanco cuando el ratón está sobre él */
+}
+
+
+
+
+
+.logo a img {
+    height: auto;
+    width: 10%; /* El logo ocupará el 10% del ancho del contenedor */
+}
+
+.card-img-top {
+    width: 100%;  /* Ocupa el 100% del ancho de la tarjeta */
+    height: 400px; /* Establece una altura fija para todas las imágenes */
+    object-fit: cover;  /* Asegura que las imágenes mantengan su proporción sin distorsionarse */
+}
+
+
+/* Contenedor del banner */
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Para que ocupe toda la altura de la ventana */
+    overflow: hidden; /* Para que el contenido no se desborde fuera del contenedor */
+}
+
+/* Video */
+#banner-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que el video cubra toda el área sin deformarse */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Capa de superposición */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    z-index: 1; /* Asegura que esté encima del video */
+}
+
+/* Contenido del banner (texto) */
+.banner-content {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para un mejor centrado */
+    color: white;
+    text-align: center;
+    z-index: 2; /* Asegura que el texto esté encima de la superposición */
+    padding: 0 20px; /* Un poco de espacio a los lados del texto */
+}
+
+.banner-content h1 {
+    font-size: 2.5rem; /* Tamaño del texto (ajustar según necesidad) */
+    line-height: 1.2;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+
+
+@media (min-width: 1440px) and (max-width: 1920px) {
+    .logo a img {
+        width: 8%; /* Reducir un poco el tamaño del logo */
+    }
+
+    .navbar-nav {
+        font-size: 1.5rem;
+    }
+
+    .navbar-nav .nav-item svg {
+        margin-right: 120px; /* Aumentar el espacio del ícono del carrito */
+    }
+
+    .card-img-top {
+        height: 500px; /* Aumentar la altura de las imágenes en las tarjetas */
+    }
+
+    .banner-content h1 {
+        font-size: 3rem;
+    }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .logo a img {
+        width: 10%; /* Ajustar el tamaño del logo */
+    }
+
+    .navbar-nav {
+        font-size: 1.3rem;
+    }
+
+    .card-img-top {
+        height: 450px; /* Ajustar la altura de las imágenes */
+    }
+
+    .banner-content h1 {
+        font-size: 2.5rem; /* Reducir ligeramente el tamaño del título */
+    }
+
+    .navbar-nav .nav-item svg {
+        margin-right: 90px; /* Ajustar el espacio del ícono del carrito */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .logo a img {
+        width: 12%; /* Ajustar un poco el logo */
+    }
+
+    .navbar-nav {
+        font-size: 1.2rem;
+    }
+
+    .card-img-top {
+        height: 350px; /* Reducir la altura de las imágenes */
+    }
+
+    .banner-content h1 {
+        font-size: 2rem; /* Reducir más el tamaño del título */
+    }
+
+    .navbar-nav .nav-item svg {
+        margin-right: 60px; /* Ajustar el espacio del ícono del carrito */
+    }
+
+    /* Menú móvil */
+    .navbar-toggler {
+        margin-right: 10px; /* Ajuste para el botón del menú */
+    }
+
+    .navbar-collapse {
+        background-color: #e2e2e2;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px; /* Espacio entre los elementos del menú */
+    }
+}
+
+
+/* Media query para pantallas móviles (iPhone 15 Pro y otros dispositivos similares) */
+@media (max-width: 768px) {
+    /* Logo */
+    .logo a img {
+        width: 25%; /* Hacer el logo un poco más grande para móviles */
+    }
+
+    /* Menú de navegación */
+    .navbar-nav {
+        font-size: 1rem; /* Ajustamos el tamaño de la fuente del menú */
+    }
+
+    .navbar-nav .nav-item {
+        text-align: center;
+        margin-bottom: 10px; /* Espacio entre los elementos de la navegación */
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 0; /* Espaciado vertical */
+    }
+
+    /* Hacemos que el contenido se apile verticalmente */
+    .princing-header h1 {
+        font-size: 1.8rem; /* Reducir el tamaño del título */
+        margin-bottom: 20px;
+    }
+
+    /* Las tarjetas de productos deben apilarse verticalmente */
+    .card {
+        margin-bottom: 20px; /* Espacio entre las tarjetas */
+    }
+
+    .card-img-top {
+        height: 250px; /* Ajustar la altura de las imágenes */
+        object-fit: cover; /* Mantener la proporción de la imagen */
+    }
+
+    .card-body {
+        padding: 15px; /* Añadir espacio dentro de las tarjetas */
+    }
+
+    .banner-content h1 {
+        font-size: 1.5rem; /* Reducir aún más el tamaño del texto en el banner */
+    }
+
+    /* Envolver las imágenes del carrito y el ícono en una sola columna */
+    .navbar-nav .nav-item svg {
+        width: 40px; /* Reducir el tamaño del icono del carrito */
+        margin-right: 0; /* Eliminar el margen extra a la derecha */
+    }
+
+    /* Ajustar el menú desplegable para móviles */
+    .navbar-collapse {
+        background-color: #fff;
+    }
+
+    .dropdown-menu {
+        position: relative;
+        transform: none !important; /* Aseguramos que el carrito no se desplace fuera de la pantalla */
+    }
+
+    /* Se puede modificar el contenido del banner para que ocupe más espacio */
+    .banner-container {
+        height: 60vh; /* Reducir la altura del banner */
+    }
+
+    /* Para las filas de productos, cambiamos de 3 a 1 columna */
+    .row-cols-md-3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Alinear los productos al centro */
+    }
+
+    /* Ajustar los botones para el carrito y procesamiento */
+    .btn {
+        width: 100%; /* Aseguramos que los botones ocupen todo el ancho */
+        margin-top: 15px; /* Añadir espacio entre los botones */
+    }
+
+    /* Ajustar la imagen del producto en la sección de "Más vendidos" */
+    .best-sellers .card-img-top {
+        height: 200px; /* Ajustar la altura de las imágenes */
+    }
+
+    /* Hacer que los productos más vendidos se apilen verticalmente */
+    .best-sellers .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrar los productos */
+    }
+}
+
+/* Opcional: Ajuste para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 1.5rem; /* Reducir el tamaño del texto en pantallas pequeñas */
+    }
+}
+
+
+
+
+/* Estilo para el modo claro (predeterminado) */
+body {
+    background-color: #fff;
+    color: #000;
+}
+
+.navbar {
+    background-color: #fff;
+}
+
+.navbar-brand img {
+    filter: brightness(1);
+}
+
+/* Estilo para el modo oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+body.dark-mode .navbar {
+    background-color: #333;
+}
+
+header.dark-mode {
+    background-color: #333;
+}
+
+body.dark-mode .navbar-brand img {
+    filter: brightness(0) invert(1); /* Ajusta el brillo para imágenes en modo oscuro */
+}

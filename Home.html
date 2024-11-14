@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike</title>
+    <link rel="shortcut icon" href="imagenes/logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/sweetalert2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container-fluid">
+            <div class="row justify-content-between align-items-lg-stretch">
+                <nav class="navbar navbar-expand-lg nav-cont">
+                    <div class="container-fluid">
+                        <!-- Logo de la marca -->
+                        <a class="navbar-brand logo" href="Home.html">
+                            <img src="imagenes/logoblanco.png" alt="logo" style="height: 90px; width: 90px;">
+                        </a>
+                        
+                        <!-- Botón para desplegar el menú en pantallas pequeñas -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+    
+                        <!-- Menú de navegación -->
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#hombre">Hombre</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#mujer">Mujer</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#ninoa">Niño/a</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#ofertas">Ofertas</a>
+                                </li>
+                            </ul>
+
+                                <!-- Icono para cambiar el modo -->
+                                <button id="mode-toggle" class="btn btn-outline-light">
+                                    <i class="fas fa-sun" id="mode-icon"></i>
+                                </button>
+
+    
+                            <!-- Icono del carrito de compras alineado a la derecha -->
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <svg class="nav-link dropdown-toggle img-fluid" id="dropdown01" data-bs-toggle="dropdown"
+                                        aria-expanded="false" aria-haspopup="true" aria-hidden="true"
+                                        focusable="false" viewBox="0 0 24 24" role="img" width="50px" height="50px" fill="none">
+                                        <path stroke="currentColor" stroke-width="1.5"
+                                            d="M8.25 8.25V6a2.25 2.25 0 012.25-2.25h3a2.25 2.25 0 110 4.5H3.75v8.25a3.75 3.75 0 003.75 3.75h9a3.75 3.75 0 003.75-3.75V8.25H17.5"></path>
+                                    </svg>
+    
+                                    <!-- Dropdown de carrito -->
+                                    <div class="dropdown-menu p-2" id="carrito" aria-labelledby="navbarCollapse">
+                                        <table class="table" id="lista-carrito">
+                                            <thead>
+                                                <tr>
+                                                    <th>Imagen</th>
+                                                    <th>Nombre</th>
+                                                    <th>Precio</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                            <a href="#" id="vaciar-carrito" class="btn btn-danger d-grid mb-2">
+                                                Vaciar Carrito
+                                            </a>
+                                            <a href="#" id="procesar-pedido" class="btn btn-success d-grid">
+                                                Procesar Compra
+                                            </a>
+                                        </table>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Banner de Video -->
+    <section class="banner-container">
+        <video autoplay loop muted playsinline class="vjs-tech" id="banner-video">
+            <source src="imagenes/Nike.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="banner-content">
+            <!-- <h1>"Descubre tu próximo nivel de rendimiento. Explora las últimas innovaciones y lleva tu pasión al siguiente paso con Nike"</h1> -->
+            <p></p>
+        </div>
+    </section>
+
+    <!-- productos -->
+    <main>
+        <div class="princing-header px-3 py-3 pt-md-5 pb-md-4 my-4 mx-auto text-center">
+            <h1 class="display-4 mt-4">
+                Categoria de Productos
+            </h1>
+            <div class="container" >
+                <div class="row row-cols-md-3 g-4 mt-5 text-center">
+                    <div class="col">
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-header">
+                                <h4 class="my-0 fw-bold">
+                                    Hombres
+                                </h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="imagenes/hombres.png" alt="computadorahp" class="card-img-top">
+                                <a href="" class="btn btn-primary d-grid mt-5" data-id="1">Ver Mas</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-header">
+                                <h4 class="my-0 fw-bold">
+                                    Mujeres
+                                </h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="imagenes/mujeres" alt="computadorahp" class="card-img-top">
+                                <a href="" class="btn btn-primary d-grid mt-5" data-id="1">Ver Mas</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-header">
+                                <h4 class="my-0 fw-bold">
+                                    Niños
+                                </h4>
+                            </div>
+                            <div class="card-body">
+                                <img src="imagenes/niños.png" alt="computadorahp" class="card-img-top">
+                                <a href="#" class="btn btn-primary d-grid mt-5" data-id="1">Ver Mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>            
+    </main>
+
+    <section class="best-sellers py-5">
+        <div class="container" id="lista-productos">
+            <h2 class="text-center mb-4">Productos Más Vendidos</h2>
+            <!-- Primera fila de productos -->
+            <div class="row row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <img src="imagenes/imagen-1.jpg" alt="Air Force 1 Low" class="card-img-top" data-bs-toggle="modal" data-bs-target="#productModal1">
+                            <h2 class="my-0 fw-bold nombre">Air Force 1 Low</h2>
+                            <h4 class="card-title pricing-card-title precio pt-4">$ <span>100.00</span></h4>
+                            <a href="#" class="btn btn-primary d-grid agregar-carrito" data-id="5">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Modal para Producto 1 -->
+                <div class="modal fade" id="productModal1" tabindex="-1" aria-labelledby="productModal1Label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="productModal1Label">Air Force 1 Low</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="d-flex flex-column miniaturas">
+                                            <img src="imagenes/imagen-1.jpg" class="img-thumbnail mb-2" onclick="changeImage('imagenes/imagen-1.jpg')" alt="Miniatura 1">
+                                            <img src="imagenes/imagen-1.1.jpg" class="img-thumbnail mb-2" onclick="changeImage('imagenes/imagen-1.1.jpg')" alt="Miniatura 2">
+                                            <img src="imagenes/imagen-1.2.jpg" class="img-thumbnail mb-2" onclick="changeImage('imagenes/imagen-1.2.jpg')" alt="Miniatura 3">
+                                            <img src="imagenes/imagen-1.3.jpg" class="img-thumbnail mb-2" onclick="changeImage('imagenes/imagen-1.3.jpg')" alt="Miniatura 4">
+                                        </div>
+                                    </div>
+                                    <div class="col-9 text-center">
+                                        <img id="mainImage" src="imagenes/imagen-1.jpg" class="img-fluid mb-3" alt="Producto 1">
+                                        <p><strong>Precio:</strong> $100.00</p>
+                                        <p><strong>Descripción:</strong> Son cómodas, duraderas y atemporales...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <a href="#" class="btn btn-primary d-grid agregar-carrito" data-id="5">Agregar al Carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <img src="imagenes/imagen2.png" alt="Nike Air Zoom Pegasus 39" class="card-img-top" data-bs-toggle="modal" data-bs-target="#productModal2">
+                            <h2 class="my-0 fw-bold">Nike Air Zoom</h2>
+                            <h4 class="card-title pricing-card-title precio pt-4">$ <span>120.00</span></h4>
+                            <a href="#" class="btn btn-primary d-grid agregar-carrito" data-id="6">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Modal para Producto 2 (cambiamos el id aquí) -->
+                <div class="modal fade" id="productModal2" tabindex="-1" aria-labelledby="productModal2Label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="productModal2Label">Nike Air Zoom</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="d-flex flex-column miniaturas">
+                                            <img src="imagenes/imagen2.png" class="img-thumbnail mb-2" onclick="changeImage('imagenes/imagen2.png')" alt="Miniatura 1">
+                                            <img src="imagenes/imagen2.1.png" class="img-thumbnail mb-2" onclick="changeImage('imagenes/imagen2.1.png')" alt="Miniatura 2">
+                                            <img src="imagenes/imagen2.2.png" class="img-thumbnail mb-2" onclick="changeImage('imagenes/imagen2.2.png')" alt="Miniatura 3">
+                                            <img src="imagenes/imagen2.3.png" class="img-thumbnail mb-2" onclick="changeImage('imagenes/imagen2.3.png')" alt="Miniatura 4">
+                                        </div>
+                                    </div>
+                                    <div class="col-9 text-center">
+                                        <img id="mainImage" src="imagenes/imagen2.png" class="img-fluid mb-3" alt="Producto 2">
+                                        <p><strong>Precio:</strong> $120.00</p>
+                                        <p><strong>Descripción:</strong> Las Nike Air Zoom ofrecen una comodidad incomparable...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <a href="#" class="btn btn-primary d-grid agregar-carrito" data-id="6">Agregar al Carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal para Producto 1 -->
+            <div class="modal fade" id="productModal1" tabindex="-1" aria-labelledby="productModal1Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModal1Label">Nike Air Zoom</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <!-- Miniaturas a la izquierda -->
+                                <div class="col-3">
+                                    <div class="d-flex flex-column miniaturas">
+                                        <img src="imagenes/imagen2.png" class="img-thumbnail mb-2" onclick="changeImage('imagenes/imagen2.png')" alt="Miniatura 1">
+                                        <img src="imagenes/imagen2.1.png" class="img-thumbnail mb-2" onclick="changeImage('imagenes/imagen2.1.png')" alt="Miniatura 2">
+                                        <img src="imagenes/imagen2.2.png" class="img-thumbnail mb-2" onclick="changeImage('imagenes/imagen2.2.png')" alt="Miniatura 3">
+                                        <img src="imagenes/imagen2.3.png" class="img-thumbnail mb-2" onclick="changeImage('imagenes/imagen2.3.png')" alt="Miniatura 4">
+                                    </div>
+                                </div>
+                                <!-- Imagen principal a la derecha -->
+                                <div class="col-9 text-center">
+                                    <img id="mainImage" src="imagenes/imagen2.png" class="img-fluid mb-3" alt="Producto 1">
+                                    <p><strong>Precio:</strong> $120.00</p>
+                                    <p><strong>Descripción:</strong> Son cómodas, duraderas y atemporales. La clásica estética de los 80 se combina con materiales premium para crear un estilo perfecto para dentro y fuera de la cancha. Esta edición en blanco de las AF1 celebra la época más espeluznante del año con un diseño perforado en forma de máscara de hockey.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <a href="#" class="btn btn-primary d-grid agregar-carrito" data-id="5">Agregar al Carrito </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="col">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <img src="imagenes/imagen3.png" alt="Nike React Infinity Run Flyknit" class="card-img-top">
+                            <h2 class="my-0 fw-bold">Nike React Infinity</h2>
+                            <h4 class="card-title pricing-card-title precio pt-4">$ <span>130.00</span></h4>
+                            <a href="" class="btn btn-primary d-grid agregar-carrito" data-id="7">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Segunda fila de productos -->
+            <div class="row row-cols-md-3 g-4 mt-4">
+                <div class="col">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <img src="imagenes/imagen4.png" alt="Nike Air Max 270" class="card-img-top">
+                            <h2 class="my-0 fw-bold">Nike Air Max 270</h2>
+                            <h4 class="card-title pricing-card-title precio pt-4">$ <span>150.00</span></h4>
+                            <a href="" class="btn btn-primary d-grid agregar-carrito" data-id="8">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <img src="imagenes/imagen5.png" alt="Nike Air VaporMax Plus" class="card-img-top">
+                            <h2 class="my-0 fw-bold">Nike Air VaporMax</h2>
+                            <h4 class="card-title pricing-card-title precio pt-4">$ <span>170.00</span></h4>
+                            <a href="" class="btn btn-primary d-grid agregar-carrito" data-id="9">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <img src="imagenes/imagen6.png" alt="Nike Air Max 90" class="card-img-top">
+                            <h2 class="my-0 fw-bold">Nike Air Max 90</h2>
+                            <h4 class="card-title pricing-card-title precio pt-4">$ <span>140.00</span></h4>
+                            <a href="" class="btn btn-primary d-grid agregar-carrito" data-id="10">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Sección Sobre Nosotros -->
+    <section id="sobre-nosotros" class="bg-dark text-white py-5">
+        <div class="container text-center">
+            <h2 class="display-4 mb-4">Quienes Somos y Nuestra Mision</h2>
+            <p class="lead mb-4">
+                En Nike, creemos que el poder del deporte puede transformar el mundo. 
+                Desde nuestros humildes comienzos, hemos estado comprometidos con la innovación, la calidad y el rendimiento. 
+                Cada producto que creamos tiene como objetivo mejorar tu experiencia deportiva y ayudarte a superar tus límites.
+            </p>
+            <p class="mb-4">
+                Nuestra misión es inspirar a cada atleta del mundo, y entendemos que "si tienes un cuerpo, eres un atleta". 
+                Ya sea que busques mejorar tu rendimiento en la cancha, en la pista o en la vida diaria, Nike está aquí para impulsarte a llegar más lejos.
+            </p>
+        </div>
+    </section>
+
+
+
+
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row text-center"> <!-- Centra las columnas en dispositivos medianos y grandes -->
+            <!-- Columna Nike -->
+            <div class="col-md-4 mb-3">
+                <h4 class="mb-3">Nike</h4>
+                <p>
+                    Comprometidos con el deporte y la innovación,<br> Nike ha sido pionero en el diseño de productos <br>
+                    deportivos que ayudan a los atletas a rendir <br> al máximo.
+                </p>
+            </div>
+            
+            <!-- Columna Enlaces rápidos -->
+            <div class="col-md-4 mb-3">
+                <h4 class="mb-3">Enlaces rápidos</h4>
+                <ul class="list-unstyled">
+                    <li><a href="#sobre-nosotros" class="text-white">Sobre Nosotros</a></li>
+                    <li><a href="#hombre" class="text-white">Hombre</a></li>
+                    <li><a href="#mujer" class="text-white">Mujer</a></li>
+                    <li><a href="#ninoa" class="text-white">Niño/a</a></li>
+                    <li><a href="#ofertas" class="text-white">Ofertas</a></li>
+                </ul>
+            </div>
+            
+            <!-- Columna Síguenos -->
+            <div class="col-md-4 mb-3">
+                <h4 class="mb-3">Síguenos</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/nike" class="text-white me-3">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/nike" class="text-white me-3">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/nike" class="text-white me-3">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.youtube.com/user/nike" class="text-white">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Línea de derechos reservados -->
+        <div class="text-center mt-4">
+            <p>&copy; 2024 Nike, Inc. Todos los derechos reservados Kendall Piedra.</p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/sweetalert2.js"></script>
+    <!-- JS PROPIOS -->
+    <script src="js/carrito.js"></script>
+    <script src="js/pedido.js"></script>
+    <script src="js/email.js"></script>
+    <script src="js/modos.js"></script>
+
+    <script>
+        function changeImage(imagePath) {
+            document.getElementById('mainImage').src = imagePath;
+        }
+    </script>
+</body>
+</html>

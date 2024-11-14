@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Compra</title>
+    <link rel="shortcut icon" href="imagenes/logo.png" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/sweetalert2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/compra.css">
+</head>
+
+<body>
+  <!-- Header -->
+<header>
+    <div class="container-fluid">
+        <div class="row justify-content-between align-items-lg-stretch">
+            <nav class="navbar navbar-expand-lg nav-cont">
+                <div class="container-fluid">
+                    <!-- Logo de la marca -->
+                    <a class="navbar-brand logo" href="Home.html">
+                        <img src="imagenes/logo.png" alt="logo" style="height: 90px; width: 90px;">
+                    </a>
+                    
+                    <!-- Botón para desplegar el menú en pantallas pequeñas -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Menú de navegación -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#hombre">Hombre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#mujer">Mujer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#ninoa">Niño/a</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#ofertas">Ofertas</a>
+                            </li>
+                        </ul>
+
+                            <!-- Icono para cambiar el modo -->
+                            <button id="mode-toggle" class="btn btn-outline-light">
+                                <i class="fas fa-sun" id="mode-icon"></i>
+                            </button>
+
+
+                        <!-- Icono del carrito de compras alineado a la derecha -->
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <svg class="nav-link dropdown-toggle img-fluid" id="dropdown01" data-bs-toggle="dropdown"
+                                    aria-expanded="false" aria-haspopup="true" aria-hidden="true"
+                                    focusable="false" viewBox="0 0 24 24" role="img" width="50px" height="50px" fill="none">
+                                    <path stroke="currentColor" stroke-width="1.5"
+                                        d="M8.25 8.25V6a2.25 2.25 0 012.25-2.25h3a2.25 2.25 0 110 4.5H3.75v8.25a3.75 3.75 0 003.75 3.75h9a3.75 3.75 0 003.75-3.75V8.25H17.5"></path>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+    
+
+<main>
+    <div class="container-fluid mt-5">
+        <h2 class="d-flex justify-content-center align-center mb-4 mt-5">Realizar Compra</h2>
+        <div class="row">
+            <!-- Columna de productos -->
+            <div class="col-lg-8">
+                <div class="product-section">
+                    <div class="table-responsive mt-5" id="carrito">
+                        <table class="table table-striped" id="lista-compra">
+                            <thead>
+                                <tr>
+                                    <th width="16%" scope="col">Imagen</th>
+                                    <th width="16%" scope="col">Nombre</th>
+                                    <th width="16%" scope="col">Precio</th>
+                                    <th width="16%" scope="col">Cantidad</th>
+                                    <th width="16%" scope="col">Subtotal</th>
+                                    <th width="16%" scope="col">Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody id="lista-compras" >
+                            </tbody>
+                            <tfoot class="mt-5">
+                                <tr>
+                                    <th colspan="5" scope="col" class="text-end">Subtotal:</th>
+                                    <th id="subtotal" scope="col">$0.00</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="5" scope="col" class="text-end">IVA:</th>
+                                    <th id="iva" scope="col">$0.00</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="5" scope="col" class="text-end">Total:</th>
+                                    <th id="total" scope="col">$0.00</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna de factura -->
+            <div class="col-lg-4 d-flex flex-column " >
+                <div class="container form-section flex-grow-1">
+                    <form action="#" id="procesar-pago" method="post">
+                        <div class="row mb-3">
+                            <label for="cliente" class="col-12 col-md-3 col-form-label">Nombre completo:</label>
+                            <div class="col-12 col-md-9">
+                                <input type="text" name="cliente" id="cliente" class="form-control"
+                                    placeholder="Ingresa nombre del cliente" required autofocus>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="correo" class="col-12 col-md-3 col-form-label">Correo:</label>
+                            <div class="col-12 col-md-9">
+                                <input type="email" name="correo" id="correo" class="form-control"
+                                    placeholder="Ingresa tu correo" required>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="fuente" class="col-12 col-md-3 col-form-label">¿Cómo conociste nuestros productos?</label>
+                            <div class="col-12 col-md-9">
+                                <select name="fuente" id="fuente" class="form-select" required>
+                                    <option value="redes-sociales">Redes Sociales</option>
+                                    <option value="television">Televisión</option>
+                                    <option value="amigos">Por Amigos</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="edad" class="col-12 col-md-3 col-form-label">Rango de Edad:</label>
+                            <div class="col-12 col-md-9">
+                                <select name="edad" id="edad" class="form-select" required>
+                                    <option value="18-24">18-24 años</option>
+                                    <option value="25-34">25-34 años</option>
+                                    <option value="35-44">35-44 años</option>
+                                    <option value="45-54">45-54 años</option>
+                                    <option value="55-64">55-64 años</option>
+                                    <option value="65+">65+ años</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-between mt-3">
+                                <div class=" ">
+                                    <a href="index.html" class="btn btn-info btn-lg">Seguir comprando</a>
+                                </div>
+                                <div class="">
+                                    <a href="pedidolisto.html" id="procesacompra" class="btn btn-success btn-lg">Realizar Compra</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="js/sweetalert2.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/compras.js"></script>
+    <script src="js/server.js"></script>
+    <script src="js/modos.js"></script>
+
+</body>
+
+</html>
